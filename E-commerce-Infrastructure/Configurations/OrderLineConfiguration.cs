@@ -16,7 +16,7 @@ namespace E_commerce_Infrastructure.Configurations
             builder.HasKey(ol => ol.Id);
             builder.Property(ol => ol.Price).HasColumnType("decimal(18,2)").IsRequired();
             builder.Property(ol => ol.Qty).IsRequired();
-            builder.Property(ol=>ol.ProductItem).IsRequired();
+            builder.Property(ol=>ol.ProductItemId).IsRequired();
             builder.Property(ol => ol.ShopOrderId).IsRequired();
 
 
