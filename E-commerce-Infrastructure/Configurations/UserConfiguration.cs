@@ -20,9 +20,9 @@ namespace E_commerce_Infrastructure.Configurations
             builder.Property(u => u.Phone).IsRequired().HasColumnType("NVARCHAR(15)");
             builder.Property(u => u.Email).IsRequired().HasColumnType("NVARCHAR(100)");
 
-            builder.HasMany(u => u.Accounts)
+            builder.HasOne(u => u.Account)
                    .WithOne(a => a.User)
-                   .HasForeignKey(a => a.UserId)
+                   .HasForeignKey<Account>(a => a.UserId)
                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(u => u.Orders)

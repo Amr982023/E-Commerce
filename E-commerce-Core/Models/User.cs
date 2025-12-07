@@ -17,7 +17,7 @@ namespace E_commerce_Core.Models
         public string Email { get; set; }
 
         // Navigation
-        public ICollection<Account> Accounts { get; set; }
+        public Account Account { get; set; }
         public ICollection<ShopOrder> Orders { get; set; }
         public ICollection<UserReview> Reviews { get; set; }
     }

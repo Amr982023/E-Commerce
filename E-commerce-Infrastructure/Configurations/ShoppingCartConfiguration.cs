@@ -18,8 +18,8 @@ namespace E_commerce_Infrastructure.Configurations
 
 
             builder.HasOne(sc => sc.Account)
-                   .WithMany(a => a.ShoppingCarts)
-                   .HasForeignKey(sc => sc.AccountId)
+                   .WithOne(a => a.ShoppingCart)
+                   .HasForeignKey<ShoppingCart>(sc => sc.AccountId)
                    .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(sc => sc.Items)

@@ -12,7 +12,6 @@ namespace E_commerce_Core.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string ProductImage { get; set; }
-        public string Email { get; set; }
 
         public int CategoryId { get; set; }
         public ProductCategory Category { get; set; }

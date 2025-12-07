@@ -11,7 +11,8 @@ namespace E_commerce_Core.Interfaces.Unit_Of_Work_Interface
         //another interfaces
 
 
-        int Complete();       
+        int Complete(); 
+        Task<int> CompleteAsync();
 
     }
 }

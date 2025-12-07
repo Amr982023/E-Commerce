@@ -17,10 +17,12 @@ namespace E_commerce_Infrastructure.Configurations
             builder.Property(a => a.UserName).IsRequired().HasMaxLength(50);
             builder.Property(a => a.Password).IsRequired().HasMaxLength(50);
             builder.Property(a=>a.UserId).IsRequired();
+            builder.Property(a => a.CreatedAt).IsRequired().HasDefaultValueSql("GETDATE()");
+            builder.Property(a => a.UserRole).IsRequired().HasDefaultValue((short)2);
 
             builder.HasOne(a => a.User)
-                   .WithMany(u => u.Accounts)
-                   .HasForeignKey(a => a.UserId)
+                   .WithOne(u => u.Account)
+                   .HasForeignKey<Account>(a => a.UserId)
                    .OnDelete(DeleteBehavior.Restrict);
 
 
@@ -35,9 +37,9 @@ namespace E_commerce_Infrastructure.Configurations
                 .HasForeignKey(pm=>pm.AccountId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasMany(a => a.ShoppingCarts)
+            builder.HasOne(a => a.ShoppingCart)
                 .WithOne(sc => sc.Account)
-                .HasForeignKey(sc => sc.AccountId)
+                .HasForeignKey<ShoppingCart>(sc => sc.AccountId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

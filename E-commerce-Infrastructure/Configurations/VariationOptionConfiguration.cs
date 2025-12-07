@@ -17,6 +17,7 @@ namespace E_commerce_Infrastructure.Configurations
             builder.Property(vo => vo.Value)
                    .IsRequired()
                    .HasMaxLength(100);
+            builder.HasIndex(vo => vo.Value).IsUnique();
             builder.Property(vo => vo.VariationId).IsRequired();
 
             builder.HasOne(vo => vo.Variation)
