@@ -100,6 +100,11 @@ namespace E_commerce_Application.Services
 
             await _uow.CompleteAsync();
 
+            await _uow.EmailService.SendMessageAsync(
+                user.Email,
+               $"Welcome to E-Commerce Platform \nHello {account.User.FullName},\n\nThank you for registering an account with us. We're excited to have you on board!\n\nBest regards,\nE-Commerce Team"
+            );
+
             return account.Adapt<AccountDto>();
         }
 
@@ -111,6 +116,11 @@ namespace E_commerce_Application.Services
                 return null;
 
             account.Password = string.Empty; // Hide password
+
+            await _uow.EmailService.SendMessageAsync(
+                account.User.Email,
+               $"Login Alert \nHello {account.User.FullName},\n\nWe noticed a login to your account. If this was you, no further action is needed. If you did not log in, please reset your password immediately.\n\nBest regards,\nE-Commerce Team"
+            );
 
             return account.Adapt<AccountDto>();
         }
@@ -191,6 +201,11 @@ namespace E_commerce_Application.Services
             _uow.Accounts.Update(account);
             await _uow.CompleteAsync();
 
+           await _uow.EmailService.SendMessageAsync(
+                account.User.Email,
+                "Password Changed Your account password has been successfully changed."
+            );
+
             return true;
         }
  
@@ -203,6 +218,11 @@ namespace E_commerce_Application.Services
 
             _uow.Accounts.Delete(account);
             await _uow.CompleteAsync();
+
+            await _uow.EmailService.SendMessageAsync(
+                account.User.Email,
+                "Account Deleted \nYour account has been successfully deleted."
+            );
             return true;
         }
 

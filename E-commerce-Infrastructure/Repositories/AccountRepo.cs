@@ -20,13 +20,7 @@ namespace E_commerce_Infrastructure.Repositories
         public AccountRepo(ApplicationDbContext context) : base(context)
         {  
         }
-        public override async Task<Account> AddAsync(Account entity)
-        {
-            await _context.Accounts.AddAsync(entity);
-            clsSendMails.SendMessage(entity.User.Email, $"Welcome to E-Commerce Platform \nHello {entity.User.FullName},\n\nThank you for registering an account with us. We're excited to have you on board!\n\nBest regards,\nE-Commerce Team");
-            return entity;
-        }
-
+       
         public async Task<Account> AuthenticateAsync(string username, string password)
         {
             // 1) Get user by username
@@ -43,7 +37,6 @@ namespace E_commerce_Infrastructure.Repositories
                 return null;
 
             // 3) Success
-            clsSendMails.SendMessage(account.User.Email, $"Login Alert \nHello {account.User.FullName},\n\nWe noticed a login to your account. If this was you, no further action is needed. If you did not log in, please reset your password immediately.\n\nBest regards,\nE-Commerce Team");
             return account;
         }
 

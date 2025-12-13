@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_commerce_Core.Repository_Interfaces;
 
 namespace E_commerce_Core.Interfaces.Unit_Of_Work_Interface
 {
     public interface IUnitOfWork : IDisposable
     {
         //another interfaces
+         IEmailService EmailService { get; }
          IAccount Accounts { get; }
          IAddress Addresses { get; }
          ICountry Countries { get; }

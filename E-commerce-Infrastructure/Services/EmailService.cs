@@ -5,12 +5,13 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using E_commerce_Core.Repository_Interfaces;
 
 namespace E_commerce_Infrastructure.Services
 {
-    internal class clsSendMails
+    internal class EmailService : IEmailService
     {
-        public async static void SendMessage(string toEmail, string Message)
+        public async Task SendMessageAsync(string toEmail, string Message)
         {
             // Sender information
             var fromAddress = new MailAddress("someoneegy2018@gmail.com", "Amr Bank System");
@@ -45,9 +46,9 @@ namespace E_commerce_Infrastructure.Services
             }
         }
 
-        public static void SendResetCode(string toEmail, string resetCode)
+        public async Task SendResetOTP(string toEmail, string resetCode)
         {
-            SendMessage(toEmail, $"Your reset code is: {resetCode}");
+            await SendMessageAsync(toEmail, $"Your reset OTP is: {resetCode}");
 
         }
 

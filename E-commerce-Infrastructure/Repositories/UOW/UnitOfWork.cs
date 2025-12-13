@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Core.Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
+using E_commerce_Core.Repository_Interfaces;
 
 namespace E_commerce_Infrastructure.Repositories.UOW
 {
@@ -12,6 +13,7 @@ namespace E_commerce_Infrastructure.Repositories.UOW
     {
         private readonly ApplicationDbContext _context;
 
+        public IEmailService EmailService { get; private set; }
         public IAccount Accounts { get; private set; }
         public IAddress Addresses { get; private set; }
         public ICountry Countries { get; private set; }
@@ -36,6 +38,7 @@ namespace E_commerce_Infrastructure.Repositories.UOW
 
         public UnitOfWork(
         ApplicationDbContext context,
+        IEmailService emailService,
         IAccount accounts,
         IAddress addresses,
         ICountry countries,
@@ -60,6 +63,7 @@ namespace E_commerce_Infrastructure.Repositories.UOW
     )
         {
             _context = context;
+            EmailService = emailService;
             Accounts = accounts;
             Addresses = addresses;
             Countries = countries;
