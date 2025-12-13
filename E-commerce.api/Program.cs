@@ -1,8 +1,10 @@
 using System.Configuration;
 using E_commerce_Core.Interfaces;
 using E_commerce_Infrastructure;
+using E_commerce_Infrastructure.DependencyInjection;
 using E_commerce_Infrastructure.Repositories.Generic;
 using Microsoft.EntityFrameworkCore;
+using E_commerce_Application.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString,b=>b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.GetName().Name)));
-
-builder.Services.AddTransient(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplicationServices();
 
 builder.Services.AddOpenApi();
 

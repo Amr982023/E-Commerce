@@ -1663,7 +1663,10 @@
         },
         "runtime": {
           "bin/placeholder/E-commerce-Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "E-commerce-Domain/1.0.0": {
         "type": "project",
