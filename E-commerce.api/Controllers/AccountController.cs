@@ -1,10 +1,17 @@
-﻿using E_commerce_Application.Dtos.AccountDTOs;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using E_commerce_Application.Dtos.AccountDTOs;
 using E_commerce_Application.DTOs.AccountDTOs;
+using E_commerce_Application.DTOs.AuthDTOs;
+using E_commerce_Application.DTOs.UserDTOs;
 using E_commerce_Application.Services_Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 
 namespace E_commerce.api.Controllers
@@ -14,10 +21,12 @@ namespace E_commerce.api.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
+        private readonly ITokenService _TokenService;
 
-        public AccountController(IAccountService accountService)
+        public AccountController(IAccountService accountService, ITokenService TokenService)
         {
             _accountService = accountService;
+            _TokenService = TokenService;
         }
 
         // ================== Register ==================
@@ -39,13 +48,17 @@ namespace E_commerce.api.Controllers
 
 
 
+
+
+
         // ================== Authenticate ==================
+        [AllowAnonymous]
         [EnableRateLimiting("fixed")]
         [HttpPost("login")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<AccountDto>> Login([FromBody] LoginRequestDto model)
+        public async Task<ActionResult<AuthResponseDto>> Login([FromBody] LoginRequestDto model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -54,8 +67,16 @@ namespace E_commerce.api.Controllers
             if (account == null)
                 return Unauthorized("Invalid Username or Password.");
 
-            return Ok(account);
+            
+            var response = new AuthResponseDto
+            {
+                AccessToken = _TokenService.GenerateToken(account),
+                Account = account     
+            };
+
+            return Ok(response);
         }
+
 
 
 
@@ -72,6 +93,8 @@ namespace E_commerce.api.Controllers
 
             return Ok(account);
         }
+
+
 
 
 

@@ -6,6 +6,12 @@ using E_commerce_Infrastructure.Repositories.Generic;
 using Microsoft.EntityFrameworkCore;
 using E_commerce_Application.DependencyInjection;
 using Microsoft.AspNetCore.RateLimiting;
+using E_commerce.api;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Services;
+using E_commerce_Application.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +23,29 @@ builder.Services.AddControllers();
 // Services Registration
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplicationServices();
+
+builder.Services.AddScoped<ITokenService, TokenService>();
+
+var jwtOptions = builder.Configuration.GetSection("jwt").Get<jwtOptions>();
+
+builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+{
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidIssuer = jwtOptions.Issuer,
+        ValidateAudience = true,
+        ValidAudience = jwtOptions.Audience,
+        RequireExpirationTime = true,
+        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(jwtOptions.SigningKey)),
+        ValidateIssuerSigningKey = true,
+        ValidateLifetime = true,
+        
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
 // Rate limiter configuration
 builder.Services.AddRateLimiter(options =>
 {
@@ -40,6 +69,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRateLimiter();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
