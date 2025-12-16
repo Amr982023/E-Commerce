@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.Dtos.AccountDTOs;
 using E_commerce_Application.DTOs.AccountDTOs;
+using E_commerce_Application.DTOs.AuthDTOs;
 using E_commerce_Core.Models;
 
 namespace E_commerce_Application.Services_Interfaces
@@ -15,7 +16,7 @@ namespace E_commerce_Application.Services_Interfaces
         Task<AccountDto> RegisterAsync(RegisterAccountDto model);
 
         // Read
-        Task<AccountDto> AuthenticateAsync(string username, string password);
+        Task<AuthResponseDto> AuthenticateAsync(string username, string password);
         Task<AccountDto> GetByIdAsync(int accountId);
         Task<AccountDto> GetByUsernameAsync(string username);
         Task<AccountWithDetailsDto> GetWithDetailsAsync(int accountId);

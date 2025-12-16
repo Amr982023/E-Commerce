@@ -24,8 +24,6 @@ builder.Services.AddControllers();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplicationServices();
 
-builder.Services.AddScoped<ITokenService, TokenService>();
-
 var jwtOptions = builder.Configuration.GetSection("jwt").Get<jwtOptions>();
 
 builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>

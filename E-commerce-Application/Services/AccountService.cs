@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.Dtos.AccountDTOs;
 using E_commerce_Application.DTOs.AccountDTOs;
+using E_commerce_Application.DTOs.AuthDTOs;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Application.Validation;
 using E_commerce_Core.Interfaces;
@@ -20,10 +21,12 @@ namespace E_commerce_Application.Services
     public class AccountService : IAccountService
     {
         private readonly IUnitOfWork _uow;
+        private readonly ITokenService _tokenService;
 
-        public AccountService(IUnitOfWork uow)
+        public AccountService(IUnitOfWork uow,ITokenService tokenService)
         {
             _uow = uow;
+            _tokenService = tokenService;
         }
 
         // REGISTER
@@ -109,7 +112,7 @@ namespace E_commerce_Application.Services
         }
 
         // AUTHENTICATE (LOGIN)
-        public async Task<AccountDto> AuthenticateAsync(string username, string password)
+        public async Task<AuthResponseDto> AuthenticateAsync(string username, string password)
         {
             var account = await _uow.Accounts.AuthenticateAsync(username,password);
             if (account == null)
@@ -122,7 +125,15 @@ namespace E_commerce_Application.Services
                $"Login Alert \nHello {account.User.FullName},\n\nWe noticed a login to your account. If this was you, no further action is needed. If you did not log in, please reset your password immediately.\n\nBest regards,\nE-Commerce Team"
             );
 
-            return account.Adapt<AccountDto>();
+            AccountDto accountDto = account.Adapt<AccountDto>();
+
+            AuthResponseDto response = new AuthResponseDto
+            {
+                AccessToken = _tokenService.GenerateToken(accountDto),
+                Account = accountDto
+            };
+
+            return response;
         }
 
         // GET METHODS

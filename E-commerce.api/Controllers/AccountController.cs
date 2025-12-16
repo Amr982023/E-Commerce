@@ -63,18 +63,11 @@ namespace E_commerce.api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var account = await _accountService.AuthenticateAsync(model.Username, model.Password);
-            if (account == null)
+            var Response = await _accountService.AuthenticateAsync(model.Username, model.Password);
+            if (Response == null)
                 return Unauthorized("Invalid Username or Password.");
 
-            
-            var response = new AuthResponseDto
-            {
-                AccessToken = _TokenService.GenerateToken(account),
-                Account = account     
-            };
-
-            return Ok(response);
+            return Ok(Response);
         }
 
 
