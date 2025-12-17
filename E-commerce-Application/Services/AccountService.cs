@@ -39,7 +39,7 @@ namespace E_commerce_Application.Services
                 throw new InvalidOperationException("Phone already exists.");
             if (await _uow.Users.GetByEmailAsync(model.Email) != null)
                 throw new InvalidOperationException("Email already exists.");
-           if (!clsValidation.ValidatePassword(model.Password))               
+           if (!clsValidation.ValidatePassword(model.Password))
                 throw new InvalidOperationException("Password does not meet complexity requirements.");
            if (!clsValidation.ValidateEmail(model.Email))
                 throw new InvalidOperationException("Email format is invalid.");

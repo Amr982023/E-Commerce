@@ -12,6 +12,8 @@ using Microsoft.IdentityModel.Tokens;
 using E_commerce_Application.Services_Interfaces;
 using E_commerce_Application.Services;
 using E_commerce_Application.Options;
+using E_commerce.api.Middlewares;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +25,18 @@ builder.Services.AddControllers();
 // Services Registration
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplicationServices();
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Warning()              
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .WriteTo.File(
+        path: "Logs/log-.txt",
+        rollingInterval: RollingInterval.Day
+    )
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>();
 
@@ -90,6 +104,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
