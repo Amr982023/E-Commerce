@@ -127,8 +127,7 @@ namespace E_commerce_Application.Services
                $"Login Alert \nHello {account.User.FirstName},\n\nWe noticed a login to your account. If this was you, no further action is needed. If you did not log in, please reset your password immediately.\n\nBest regards,\nE-Commerce Team"
             );
 
-            AccountDto accountDto = account.Adapt<AccountDto>();
-            accountDto.Email = account.User.Email;
+            AccountDto accountDto = account.Adapt<AccountDto>(); 
 
 
             AuthResponseDto response = new AuthResponseDto
@@ -156,7 +155,17 @@ namespace E_commerce_Application.Services
         public async Task<AccountWithDetailsDto> GetWithDetailsAsync(int accountId)
         {
             var acc = await _uow.Accounts.GetAccountWithDetailsAsync(accountId);
-            return acc == null ? null : acc.Adapt<AccountWithDetailsDto>();
+            if (acc == null)
+                return null;
+            
+                var dto = acc.Adapt<AccountWithDetailsDto>();
+                foreach (var pm in dto.PaymentMethods)
+                {
+                    pm.AccountNumber = clsValidation.MaskAccountNumber(pm.AccountNumber);
+                }
+            
+            
+            return dto;
         }
 
         public async Task<IEnumerable<AccountDto>> GetAllAsync()

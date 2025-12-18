@@ -49,8 +49,9 @@ namespace E_commerce_Infrastructure.Repositories
         {
             return await _context.Accounts
                 .Include(a => a.User)
-                .Include(a => a.PaymentMethods)
-                .Include(a => a.ShoppingCart)
+                .Include(a=>a.Addresses)
+                .Include(a => a.PaymentMethods).ThenInclude(p=>p.PaymentType)
+                .Include(a => a.ShoppingCart).ThenInclude(sc=>sc.Items)
                 .SingleOrDefaultAsync(a => a.Id == id);
         }
 

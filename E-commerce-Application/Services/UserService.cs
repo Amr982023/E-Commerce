@@ -65,6 +65,7 @@ namespace E_commerce_Application.Services
         // Get by phone
         public async Task<UserDto?> GetByPhoneAsync(string phone)
         {
+            phone = "+" + phone;
             var user = await _uow.Users.GetByPhoneAsync(phone);
             return user == null ? null : user.Adapt<UserDto>();
         }
@@ -79,6 +80,7 @@ namespace E_commerce_Application.Services
         // Search
         public async Task<IEnumerable<UserDto>> SearchUsersAsync(string? name, string? email, string? phone)
         {
+            phone = "+" + phone;
             var users = await _uow.Users.SearchUsersAsync(name, email, phone);
             return users.Adapt<IEnumerable<UserDto>>();
         }

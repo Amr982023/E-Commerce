@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_commerce_Application.DTOs.PaymentTypeDTOs;
 
 namespace E_commerce_Application.DTOs.PaymentMethodDTOs
 {
@@ -12,12 +13,12 @@ namespace E_commerce_Application.DTOs.PaymentMethodDTOs
 
         public int AccountId { get; set; }
 
-        public int PaymentTypeId { get; set; }
-        public string PaymentTypeName { get; set; }
+        public PaymentTypeDto PaymentType { get; set; }
+  
 
         public string Provider { get; set; }
 
-        public string MaskedAccountNumber { get; set; }
+        public string AccountNumber { get; set; }
 
         public DateTime ExpiryDate { get; set; }
         public bool IsDefault { get; set; }

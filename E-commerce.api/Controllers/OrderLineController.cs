@@ -36,9 +36,16 @@ namespace E_commerce.api.Controllers
         // GET: api/orderline/order/5/item/10
         [HttpGet("order/{orderId:int}/item/{productItemId:int}")]
         [ProducesResponseType(typeof(OrderLineDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<OrderLineDto>> GetLine(int orderId, int productItemId)
         {
+            if (orderId <= 0 || productItemId <= 0)
+                return BadRequest("Invalid identifiers.");
             var line = await _orderLineService.GetLineAsync(orderId, productItemId);
+            if (line == null)
+                return NotFound();
+
             return Ok(line);
         }
 

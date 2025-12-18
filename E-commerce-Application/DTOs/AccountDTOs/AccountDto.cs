@@ -12,7 +12,6 @@ namespace E_commerce_Application.Dtos.AccountDTOs
         public string UserName { get; set; }
         public short UserRole { get; set; }
         public int UserId { get; set; }
-        public string Email { get; set; }
     }
 
 }

@@ -68,7 +68,7 @@ namespace E_commerce.api.Controllers
         {
             if (string.IsNullOrWhiteSpace(phone))
                 return BadRequest("Phone is required.");
-
+      
             var user = await _service.GetByPhoneAsync(phone);
             if (user == null) return NotFound();
 
@@ -101,7 +101,7 @@ namespace E_commerce.api.Controllers
         [HttpGet("search")]
         [ProducesResponseType(typeof(IEnumerable<UserDto>), StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<UserDto>>> Search([FromQuery] string? name, [FromQuery] string? email, [FromQuery] string? phone)
-        {
+        { 
             var users = await _service.SearchUsersAsync(name, email, phone);
             return Ok(users);
         }

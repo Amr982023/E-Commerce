@@ -48,7 +48,6 @@ namespace E_commerce_Application.Services
                 {
                     new(ClaimTypes.NameIdentifier , account.Id.ToString()),
                     new(ClaimTypes.Name , account.UserName),
-                    new(ClaimTypes.Email , account.Email),
                     new(ClaimTypes.Role , GetRole(account.UserRole)),
                     new( "UserId" , account.UserId.ToString())
                 })

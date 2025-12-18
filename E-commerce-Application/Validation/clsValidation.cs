@@ -63,5 +63,17 @@ namespace E_commerce_Application.Validation
         {
             return ValidateInteger(number) || ValidateFloat(number);
         }
+
+        public static string MaskAccountNumber(string accountNumber, int visibleDigits = 4)
+        {
+            if (string.IsNullOrWhiteSpace(accountNumber))
+                return string.Empty;
+
+            if (accountNumber.Length <= visibleDigits)
+                return accountNumber;
+
+            var maskedLength = accountNumber.Length - visibleDigits;
+            return new string('*', maskedLength) + accountNumber[^visibleDigits..];
+        }
     }
 }

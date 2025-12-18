@@ -71,7 +71,7 @@ namespace E_commerce_Infrastructure.Repositories
             {
                 query = query.Where(u =>
                     u.FirstName.Contains(name) ||
-                    u.LastName.Contains(name));
+                    u.LastName.Contains(name) || u.FullName.Contains(name));
             }
 
             if (!string.IsNullOrWhiteSpace(email))

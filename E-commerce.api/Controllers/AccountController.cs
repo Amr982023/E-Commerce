@@ -80,6 +80,7 @@ namespace E_commerce.api.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AccountDto>> GetById(int id)
         {
             var account = await _accountService.GetByIdAsync(id);
@@ -97,6 +98,7 @@ namespace E_commerce.api.Controllers
         [HttpGet("ByUsername/{username}")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AccountDto>> GetByUsername(string username)
         {
             var account = await _accountService.GetByUsernameAsync(username);
@@ -125,6 +127,7 @@ namespace E_commerce.api.Controllers
 
         [HttpGet("GetAll")]
         [ProducesResponseType(typeof(IEnumerable<AccountDto>), StatusCodes.Status200OK)]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<AccountDto>>> GetAll()
         {
             var accounts = await _accountService.GetAllAsync();
@@ -136,6 +139,7 @@ namespace E_commerce.api.Controllers
 
 
         [HttpGet("search")]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(typeof(IEnumerable<AccountDto>), StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<AccountDto>>> Search([FromQuery] string? username, [FromQuery] string? email)
         {
@@ -190,6 +194,7 @@ namespace E_commerce.api.Controllers
         [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _accountService.DeleteAccountAsync(id);

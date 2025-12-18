@@ -27,7 +27,7 @@ builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplicationServices();
 
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Warning()              
+    .MinimumLevel.Information()              
     .Enrich.FromLogContext()
     .WriteTo.Console()
     .WriteTo.File(
@@ -38,7 +38,7 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>();
+var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>() ?? throw new InvalidOperationException("JwtOptions is not configured");
 
 builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
 {
@@ -58,32 +58,37 @@ builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.Authenticati
     };
 });
 
-builder.Services.AddAuthorization(options =>
-{
+builder.Services
+    .AddAuthorizationBuilder()
+
     // Products
-    options.AddPolicy("CreateProduct", policy =>
-        policy.RequireRole("Seller", "Admin"));
+    .AddPolicy("CreateProduct", policy =>
+        policy.RequireRole("Seller", "Admin"))
 
-    options.AddPolicy("UpdateProduct", policy =>
-        policy.RequireRole("Seller", "Admin"));
+    .AddPolicy("UpdateProduct", policy =>
+        policy.RequireRole("Seller", "Admin"))
 
-    options.AddPolicy("DeleteProduct", policy =>
-        policy.RequireRole("Admin"));
+    .AddPolicy("DeleteProduct", policy =>
+        policy.RequireRole("Admin"))
 
     // Orders
-    options.AddPolicy("ViewOrders", policy =>
-        policy.RequireRole("Admin", "Seller"));
+    .AddPolicy("ViewOrders", policy =>
+        policy.RequireAssertion(context =>
+            context.User.IsInRole("Admin") ||
+            context.User.IsInRole("Seller") ||
+            context.User.IsInRole("Customer")
+        ))
 
-    options.AddPolicy("ManageOrders", policy =>
-        policy.RequireRole("Admin"));
-
+    .AddPolicy("ManageOrders", policy =>
+        policy.RequireRole("Admin"))
 
     // Users
-    options.AddPolicy("ManageUsers", policy =>
-        policy.RequireRole("Admin"));
+    .AddPolicy("ManageUsers", policy =>
+        policy.RequireRole("Admin"))
+// Users
+    .AddPolicy("ManageAccounts", policy =>
+        policy.RequireRole("Admin","Seller", "Customer"));
 
-
-});
 
 // Rate limiter configuration
 builder.Services.AddRateLimiter(options =>

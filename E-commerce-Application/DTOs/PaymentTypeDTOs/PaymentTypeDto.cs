@@ -9,7 +9,7 @@ namespace E_commerce_Application.DTOs.PaymentTypeDTOs
     public class PaymentTypeDto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Type { get; set; }
     }
 
 }
