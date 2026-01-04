@@ -30,30 +30,7 @@ namespace E_commerce_Infrastructure.DependencyInjection
 
             // Email Service
             services.AddScoped<IEmailService, EmailService>();
-
-            // Repositories    
-            services.AddScoped<IAccount, AccountRepo>();
-            services.AddScoped<IUser, UserRepo>();
-            services.AddScoped<IProduct, ProductRepo>();
-            services.AddScoped<IProductItem, ProductItemRepo>();
-            services.AddScoped<IProductCategory, ProductCategoryRepo>();
-            services.AddScoped<IOrderLine, OrderLineRepo>();
-            services.AddScoped<IShopOrder, ShopOrderRepo>();
-            services.AddScoped<IShoppingCart, ShoppingCartRepo>();
-            services.AddScoped<IShoppingCartItem, ShoppingCartItemRepo>();
-            services.AddScoped<IAddress, AddressRepo>();
-            services.AddScoped<IPaymentMethod, PaymentMethodRepo>();
-            services.AddScoped<IPaymentType, PaymentTypeRepo>();
-            services.AddScoped<IShippingMethod, ShippingMethodRepo>();
-            services.AddScoped<ICountry, CountryRepo>();
-            services.AddScoped<IVariation, VariationRepo>();
-            services.AddScoped<IVariationOption, VariationOptionRepo>();
-            services.AddScoped<IProductConfiguration, ProductConfigurationRepo>();
-            services.AddScoped<IPromotion, PromotionRepo>();
-            services.AddScoped<IPromotionCategory, PromotionCategoryRepo>();
-            services.AddScoped<IUserReview, UserReviewRepo>();
-            services.AddScoped<IOrderStatus, OrderStatusRepo>();
-
+          
             return services;
         }
 
