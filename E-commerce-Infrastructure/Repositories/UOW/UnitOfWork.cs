@@ -10,7 +10,7 @@ using E_commerce_Infrastructure.Services;
 
 namespace E_commerce_Infrastructure.Repositories.UOW
 {
-    public class UnitOfWork : IUnitOfWork, IDisposable
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
 
