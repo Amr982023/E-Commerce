@@ -8,7 +8,7 @@ using E_commerce_Core.Models;
 
 namespace E_commerce_Application.Services_Interfaces
 {
-    public interface ITokenService
+    public interface ITokenGenerator
     {
         string GenerateToken(AccountDto account);
     }

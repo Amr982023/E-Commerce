@@ -22,9 +22,9 @@ namespace E_commerce.api.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
-        private readonly ITokenService _TokenService;
+        private readonly ITokenGenerator _TokenService;
 
-        public AccountController(IAccountService accountService, ITokenService TokenService)
+        public AccountController(IAccountService accountService, ITokenGenerator TokenService)
         {
             _accountService = accountService;
             _TokenService = TokenService;

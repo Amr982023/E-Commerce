@@ -181,6 +181,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\E-commerce-Application.csproj": {
+                "projectPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\E-commerce-Application.csproj"
+              },
               "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\E-commerce-Domain.csproj": {
                 "projectPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\E-commerce-Domain.csproj"
               }

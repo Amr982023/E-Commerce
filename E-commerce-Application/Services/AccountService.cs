@@ -21,12 +21,12 @@ namespace E_commerce_Application.Services
     public class AccountService : IAccountService
     {
         private readonly IUnitOfWork _uow;
-        private readonly ITokenService _tokenService;
+        private readonly ITokenGenerator _tokenGenerator;
 
-        public AccountService(IUnitOfWork uow,ITokenService tokenService)
+        public AccountService(IUnitOfWork uow,ITokenGenerator tokenService)
         {
             _uow = uow;
-            _tokenService = tokenService;
+            _tokenGenerator = tokenService;
         }
 
         // REGISTER
@@ -132,7 +132,7 @@ namespace E_commerce_Application.Services
 
             AuthResponseDto response = new AuthResponseDto
             {
-                AccessToken = _tokenService.GenerateToken(accountDto),
+                AccessToken = _tokenGenerator.GenerateToken(accountDto),
                 Account = accountDto
             };
 

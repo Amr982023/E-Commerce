@@ -7,16 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.Dtos.AccountDTOs;
 using E_commerce_Application.Options;
+using E_commerce_Application.Services;
 using E_commerce_Application.Services_Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace E_commerce_Application.Services
+namespace E_commerce_Infrastructure.Repositories.JWT
 {
-    public class TokenService : ITokenService
+    public class TokenGenerator : ITokenGenerator
     {
         private readonly IConfiguration _configuration;
-        public TokenService(IConfiguration configuration)
+        public TokenGenerator(IConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -44,7 +45,7 @@ namespace E_commerce_Application.Services
                 Audience = options.Audience,
                 Expires = DateTime.UtcNow.AddMinutes(options.Lifetime),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.SigningKey)), SecurityAlgorithms.HmacSha256Signature),
-                Subject = new ClaimsIdentity(new Claim[] 
+                Subject = new ClaimsIdentity(new Claim[]
                 {
                     new(ClaimTypes.NameIdentifier , account.Id.ToString()),
                     new(ClaimTypes.Name , account.UserName),
