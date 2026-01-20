@@ -21,12 +21,12 @@ namespace E_commerce_Infrastructure.Repositories.Generic
 
         public IEnumerable<T> GetAll()
         {
-            return _context.Set<T>().ToList();
+            return _context.Set<T>().AsNoTracking().ToList();
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return await _context.Set<T>().ToListAsync();
+            return await _context.Set<T>().AsNoTracking().ToListAsync();
         }
 
         public T GetById(int id)
@@ -116,7 +116,7 @@ namespace E_commerce_Infrastructure.Repositories.Generic
 
             if (includes != null)
                 foreach (var include in includes)
-                    query.Include(include);
+                    query = query.Include(include);
 
             return await query.Where(criteria).Skip(skip).Take(take).ToListAsync();
         }

@@ -4,7 +4,8 @@ using E_commerce_Application.Dtos.AccountDTOs;
 using E_commerce_Application.DTOs.AccountDTOs;
 using E_commerce_Application.DTOs.AuthDTOs;
 using E_commerce_Application.DTOs.UserDTOs;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Security;
+using E_commerce_Application.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -49,10 +50,6 @@ namespace E_commerce.api.Controllers
         }
 
 
-
-
-
-
         // ================== Authenticate ==================
         [AllowAnonymous]
         [EnableRateLimiting("fixed")]
@@ -73,9 +70,6 @@ namespace E_commerce.api.Controllers
         }
 
 
-
-
-
         // ================== Read ==================
         [HttpGet("{id:int}")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status200OK)]
@@ -92,9 +86,6 @@ namespace E_commerce.api.Controllers
 
 
 
-
-
-
         [HttpGet("ByUsername/{username}")]
         [ProducesResponseType(typeof(AccountDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -107,7 +98,6 @@ namespace E_commerce.api.Controllers
 
             return Ok(account);
         }
-
 
 
         [HttpGet("WithDetails/{id:int}")]

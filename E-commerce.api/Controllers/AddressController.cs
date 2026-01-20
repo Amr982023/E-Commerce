@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mapster;
-using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Models;
 using Microsoft.AspNetCore.Authorization;
+using E_commerce_Application.Interfaces.Services;
 
 namespace E_commerce.api.Controllers
 {

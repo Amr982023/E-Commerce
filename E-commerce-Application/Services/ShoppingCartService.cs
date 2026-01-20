@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.DTOs.CartItemDTOs;
 using E_commerce_Application.DTOs.ShoppingCartDTOs;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Services;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 using E_commerce_Core.Models;
 using Mapster;

@@ -6,9 +6,9 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.Dtos.AccountDTOs;
+using E_commerce_Application.Interfaces.Security;
 using E_commerce_Application.Options;
 using E_commerce_Application.Services;
-using E_commerce_Application.Services_Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 

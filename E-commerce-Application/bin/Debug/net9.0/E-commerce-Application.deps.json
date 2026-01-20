@@ -9,6 +9,7 @@
       "E-commerce-Application/1.0.0": {
         "dependencies": {
           "E-commerce-Domain": "1.0.0",
+          "Mapster": "7.4.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.11"
         },
         "runtime": {

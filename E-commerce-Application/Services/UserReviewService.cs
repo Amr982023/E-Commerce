@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.DTOs.ProductItemDTOs;
 using E_commerce_Application.DTOs.ReviewDTOs;
-using E_commerce_Application.Services_Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 using E_commerce_Core.Models;
 using E_commerce_Application.Mapping;
+using E_commerce_Application.Interfaces.Services;
 
 namespace E_commerce_Application.Services
 {

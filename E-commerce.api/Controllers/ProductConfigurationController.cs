@@ -1,7 +1,7 @@
 ﻿using E_commerce_Application.DTOs.ProductConfigurationDTOs;
 using E_commerce_Application.DTOs.ProductItemDTOs;
 using E_commerce_Application.DTOs.VariationOptionDTOs;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

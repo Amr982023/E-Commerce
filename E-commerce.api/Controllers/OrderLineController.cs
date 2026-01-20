@@ -1,6 +1,6 @@
 ﻿using E_commerce_Application.Dtos.OrderLineDTOs;
 using E_commerce_Application.DTOs.OrderLineDTOs;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

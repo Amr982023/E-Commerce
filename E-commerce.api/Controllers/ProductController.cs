@@ -1,6 +1,6 @@
 ﻿using E_commerce_Application.DTOs.ProductDTOs;
+using E_commerce_Application.Interfaces.Services;
 using E_commerce_Application.Services;
-using E_commerce_Application.Services_Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

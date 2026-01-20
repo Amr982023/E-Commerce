@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 using E_commerce_Core.Models;
 using E_commerce_Infrastructure.Repositories.Generic;
 using E_commerce_Core.Interfaces;
-using E_commerce_Core.Security;
+using E_commerce_Infrastructure.Security;
 using Microsoft.EntityFrameworkCore;
 using E_commerce_Infrastructure.Services;
-
 
 namespace E_commerce_Infrastructure.Repositories
 {
     public class AccountRepo : GenericRepository<Account>, IAccount
     {
-       
+       private PasswordHasher _passwordHasher = new PasswordHasher();
         public AccountRepo(ApplicationDbContext context) : base(context)
         {  
         }
@@ -31,7 +30,7 @@ namespace E_commerce_Infrastructure.Repositories
                 return null;
 
             // 2) Verify password (HASH + SALT)
-            bool isValid = PasswordHasher.Verify(password, account.Password);
+            bool isValid = _passwordHasher.Verify(password, account.Password);
 
             if (!isValid)
                 return null;

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using E_commerce_Application.Dtos.OrderLineDTOs;
 using E_commerce_Application.DTOs.OrderLineDTOs;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Services;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 using E_commerce_Core.Models;
 using Mapster;

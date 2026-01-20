@@ -3,8 +3,64 @@
   "WorkspaceRootPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-application\\dependencyinjection\\applicationservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|solutionrelative:e-commerce-application\\dependencyinjection\\applicationservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|solutionrelative:e-commerce-application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-application\\interfaces\\services\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|solutionrelative:e-commerce-application\\interfaces\\services\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\repositories\\jwt\\jwtserviceregisteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\repositories\\jwt\\jwtserviceregisteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\repositories\\jwt\\tokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\repositories\\jwt\\tokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-application\\interfaces\\security\\itokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91FAFA14-7CA1-49BD-A92E-89F13A2EBE45}|E-commerce-Application\\E-commerce-Application.csproj|solutionrelative:e-commerce-application\\interfaces\\security\\itokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\repositories\\uow\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\repositories\\uow\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE4B1F2-F37C-421B-8E25-EFC2A66825A3}|E-commerce-Core\\E-commerce-Domain.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-core\\repository interfaces\\iuow\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE4B1F2-F37C-421B-8E25-EFC2A66825A3}|E-commerce-Core\\E-commerce-Domain.csproj|solutionrelative:e-commerce-core\\repository interfaces\\iuow\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\configurations\\accountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\repositories\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\repositories\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\repositories\\accountrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\repositories\\accountrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce-infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC5AF938-7311-4FFE-AFBE-68E29A60CCA8}|E-commerce-Infrastructure\\E-commerce-Infrastructure.csproj|solutionrelative:e-commerce-infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,16 +82,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationServiceCollectionExtensions.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\DependencyInjection\\ApplicationServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "E-commerce-Application\\DependencyInjection\\ApplicationServiceCollectionExtensions.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\DependencyInjection\\ApplicationServiceCollectionExtensions.cs*",
-              "RelativeToolTip": "E-commerce-Application\\DependencyInjection\\ApplicationServiceCollectionExtensions.cs*",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAjwBAAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "E-commerce.api\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "E-commerce.api\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T11:11:16.429Z",
+              "WhenOpened": "2026-01-20T17:10:32.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "E-commerce.api\\Controllers\\CountryController.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "E-commerce.api\\Controllers\\CountryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T16:22:43.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtServiceRegisteration.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\JWT\\JwtServiceRegisteration.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Repositories\\JWT\\JwtServiceRegisteration.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\JWT\\JwtServiceRegisteration.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\Repositories\\JWT\\JwtServiceRegisteration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T15:36:16.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
+              "RelativeDocumentMoniker": "E-commerce.api\\Program.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
+              "RelativeToolTip": "E-commerce.api\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T15:24:16.954Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TokenGenerator.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\JWT\\TokenGenerator.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Repositories\\JWT\\TokenGenerator.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\JWT\\TokenGenerator.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\Repositories\\JWT\\TokenGenerator.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T15:13:50.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITokenGenerator.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Interfaces\\Security\\ITokenGenerator.cs",
+              "RelativeDocumentMoniker": "E-commerce-Application\\Interfaces\\Security\\ITokenGenerator.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Interfaces\\Security\\ITokenGenerator.cs",
+              "RelativeToolTip": "E-commerce-Application\\Interfaces\\Security\\ITokenGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T15:03:18.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\Repository Interfaces\\IUOW\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "E-commerce-Core\\Repository Interfaces\\IUOW\\IUnitOfWork.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Core\\Repository Interfaces\\IUOW\\IUnitOfWork.cs",
+              "RelativeToolTip": "E-commerce-Core\\Repository Interfaces\\IUOW\\IUnitOfWork.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA6wCEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:37:50.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\UOW\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Repositories\\UOW\\UnitOfWork.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\UOW\\UnitOfWork.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\Repositories\\UOW\\UnitOfWork.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:37:27.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\Generic\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Repositories\\Generic\\GenericRepository.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\Generic\\GenericRepository.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\Repositories\\Generic\\GenericRepository.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAYwBcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:32:54.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "E-commerce-Application\\Services\\AccountService.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Services\\AccountService.cs",
+              "RelativeToolTip": "E-commerce-Application\\Services\\AccountService.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAArwIoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T13:09:48.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Interfaces\\Services\\IAccountService.cs",
+              "RelativeDocumentMoniker": "E-commerce-Application\\Interfaces\\Services\\IAccountService.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Application\\Interfaces\\Services\\IAccountService.cs",
+              "RelativeToolTip": "E-commerce-Application\\Interfaces\\Services\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T13:09:03.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccountRepo.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\AccountRepo.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Repositories\\AccountRepo.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Repositories\\AccountRepo.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\Repositories\\AccountRepo.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T12:32:14.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\appsettings.json",
+              "RelativeDocumentMoniker": "E-commerce.api\\appsettings.json",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\appsettings.json",
+              "RelativeToolTip": "E-commerce.api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-20T12:15:37.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\ApplicationDbContext.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T11:49:44.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountConfiguration.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Configurations\\AccountConfiguration.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Configurations\\AccountConfiguration.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Configurations\\AccountConfiguration.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\Configurations\\AccountConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T11:47:07.709Z"
             }
           ]
         }

@@ -9,12 +9,12 @@ using Microsoft.AspNetCore.RateLimiting;
 using E_commerce.api;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using E_commerce_Application.Services_Interfaces;
 using E_commerce_Application.Services;
 using E_commerce_Application.Options;
 using E_commerce.api.Middlewares;
 using Serilog;
 using Microsoft.OpenApi.Models;
+using E_commerce_Infrastructure.Repositories.JWT;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,25 +41,7 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>() ?? throw new InvalidOperationException("JwtOptions is not configured");
-
-builder.Services.AddAuthentication().AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
-{
-    options.SaveToken = true;
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidIssuer = jwtOptions.Issuer,
-        ValidateAudience = true,
-        ValidAudience = jwtOptions.Audience,
-        RequireExpirationTime = true,
-        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(jwtOptions.SigningKey)),
-        ValidateIssuerSigningKey = true,
-        ValidateLifetime = true,
-        
-        ClockSkew = TimeSpan.Zero
-    };
-});
+builder.Services.AddJwtServices(builder.Configuration, "Jwt");
 
 builder.Services
     .AddAuthorizationBuilder()

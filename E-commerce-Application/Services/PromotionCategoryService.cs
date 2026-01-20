@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Services;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 
 namespace E_commerce_Application.Services

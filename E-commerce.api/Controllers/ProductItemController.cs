@@ -1,10 +1,10 @@
 ﻿using E_commerce_Application.DTOs.ProductItemDTOs;
 using E_commerce_Application.DTOs.VariationOptionDTOs;
 using E_commerce_Core.DTOS;
-using E_commerce_Application.Services_Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using E_commerce_Application.Interfaces.Services;
 
 namespace E_commerce.api.Controllers
 {

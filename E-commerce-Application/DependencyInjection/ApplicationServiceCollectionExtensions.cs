@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_commerce_Application.Interfaces.Services;
 using E_commerce_Application.Services;
-using E_commerce_Application.Services_Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace E_commerce_Application.DependencyInjection

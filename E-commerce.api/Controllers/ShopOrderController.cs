@@ -1,5 +1,5 @@
 ﻿using E_commerce_Application.DTOs.ShopOrderDTOs;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Services;
 using E_commerce_Core.Consts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 using E_commerce_Application.Dtos.AccountDTOs;
 using E_commerce_Application.DTOs.AccountDTOs;
 using E_commerce_Application.DTOs.AuthDTOs;
-using E_commerce_Application.Services_Interfaces;
+using E_commerce_Application.Interfaces.Security;
+using E_commerce_Application.Interfaces.Services;
 using E_commerce_Application.Validation;
 using E_commerce_Core.Interfaces;
 using E_commerce_Core.Interfaces.Unit_Of_Work_Interface;
 using E_commerce_Core.Models;
-using E_commerce_Core.Security;
+
 using Mapster;
+using Microsoft.AspNetCore.Identity;
 
 namespace E_commerce_Application.Services
 {
@@ -22,11 +24,13 @@ namespace E_commerce_Application.Services
     {
         private readonly IUnitOfWork _uow;
         private readonly ITokenGenerator _tokenGenerator;
+        private readonly IPasswordHasher _PasswordHasher;
 
-        public AccountService(IUnitOfWork uow,ITokenGenerator tokenService)
+        public AccountService(IUnitOfWork uow,ITokenGenerator tokenService, IPasswordHasher PasswordHasher)
         {
             _uow = uow;
             _tokenGenerator = tokenService;
+            _PasswordHasher = PasswordHasher;
         }
 
         // REGISTER
@@ -84,7 +88,7 @@ namespace E_commerce_Application.Services
             };
 
             // hash password
-            var hashedPassword = PasswordHasher.Hash(model.Password);
+            var hashedPassword = _PasswordHasher.Hash(model.Password);
 
             // create account and wire navigation properties
             var account = new Account
@@ -217,10 +221,10 @@ namespace E_commerce_Application.Services
             if (account == null)
                 return false;
 
-            if (!PasswordHasher.Verify(oldPassword, account.Password))
+            if (!_PasswordHasher.Verify(oldPassword, account.Password))
                 return false;
 
-            account.Password = PasswordHasher.Hash(newPassword);
+            account.Password = _PasswordHasher.Hash(newPassword);
 
             _uow.Accounts.Update(account);
             await _uow.CompleteAsync();
