@@ -14,8 +14,9 @@ namespace E_commerce_Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<ProductConfiguration> builder)
         {
             builder.HasKey(pc => new { pc.ProductItemId, pc.VariationOptionId });
-            builder.Property(pc => pc.ProductItemId).IsRequired();
+            builder.Property(pc => pc.ProductItemId).IsRequired();       
             builder.Property(pc => pc.VariationOptionId).IsRequired();
+            builder.HasIndex(pc => pc.VariationOptionId);
 
 
             builder.HasOne(pc => pc.ProductItem)

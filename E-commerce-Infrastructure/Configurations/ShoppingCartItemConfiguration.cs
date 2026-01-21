@@ -16,7 +16,9 @@ namespace E_commerce_Infrastructure.Configurations
             builder.HasKey(sci => sci.Id);
             builder.Property(sci => sci.Qty).IsRequired();
             builder.Property(sci => sci.ShoppingCartId).IsRequired();
+            builder.HasIndex(sci => sci.ShoppingCartId);
             builder.Property(sci => sci.ProductItemId).IsRequired();
+            builder.HasIndex(sci => sci.ProductItemId);
 
 
             builder.HasOne(sci => sci.ShoppingCart)

@@ -15,10 +15,12 @@ namespace E_commerce_Infrastructure.Configurations
         {
             builder.HasKey(u => u.Id);
             builder.Property(u => u.FirstName).IsRequired().HasColumnType("NVARCHAR(50)");
+            builder.HasIndex(u => u.FirstName);
             builder.Property(u => u.LastName).IsRequired().HasColumnType("NVARCHAR(50)");
             builder.Property(u => u.FullName).HasComputedColumnSql("[FirstName] + ' ' + [LastName]");
             builder.Property(u => u.Phone).IsRequired().HasColumnType("NVARCHAR(15)");
             builder.Property(u => u.Email).IsRequired().HasColumnType("NVARCHAR(100)");
+            builder.HasIndex(u => u.Email).IsUnique();
 
             builder.HasOne(u => u.Account)
                    .WithOne(a => a.User)

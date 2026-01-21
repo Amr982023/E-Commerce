@@ -18,10 +18,15 @@ namespace E_commerce_Infrastructure.Configurations
                   .IsRequired();
             builder.Property(so => so.OrderTotalCost).IsRequired().HasColumnType("decimal(18,2)");
             builder.Property(so => so.UserId).IsRequired();
+            builder.HasIndex(so => so.UserId);
             builder.Property(so => so.PaymentMethodId).IsRequired();
+            builder.HasIndex(so => so.PaymentMethodId);
             builder.Property(so => so.ShippingAddressId).IsRequired();
+            builder.HasIndex(so => so.ShippingAddressId);
             builder.Property(so => so.ShippingMethodId).IsRequired();
+            builder.HasIndex(so => so.ShippingMethodId);
             builder.Property(so => so.OrderStatusId).IsRequired();
+            builder.HasIndex(so => so.OrderStatusId);
 
             builder.HasOne(so => so.User)
                    .WithMany(u => u.Orders)

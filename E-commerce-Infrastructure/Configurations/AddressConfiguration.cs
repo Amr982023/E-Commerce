@@ -21,7 +21,9 @@ namespace E_commerce_Infrastructure.Configurations
             builder.Property(a => a.PostalCode).IsRequired().HasMaxLength(20);
             builder.Property(a => a.IsDefault).IsRequired();
             builder.Property(a => a.CountryId).IsRequired();
+            builder.HasIndex(a => a.CountryId);
             builder.Property(a => a.AccountId).IsRequired();
+            builder.HasIndex(a => a.AccountId);
 
 
             builder.HasOne(a=>a.Country)

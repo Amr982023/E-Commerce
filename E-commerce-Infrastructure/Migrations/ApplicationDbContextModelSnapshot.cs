@@ -58,6 +58,9 @@ namespace E_commerce_Infrastructure.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
+                    b.HasIndex("UserName")
+                        .IsUnique();
+
                     b.ToTable("Accounts");
                 });
 
@@ -216,6 +219,9 @@ namespace E_commerce_Infrastructure.Migrations
 
                     b.HasIndex("AccountId");
 
+                    b.HasIndex("AccountNumber")
+                        .IsUnique();
+
                     b.HasIndex("PaymentTypeId");
 
                     b.ToTable("PaymentMethods");
@@ -268,6 +274,9 @@ namespace E_commerce_Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("Products");
                 });
@@ -340,6 +349,9 @@ namespace E_commerce_Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
+                    b.HasIndex("SKU")
+                        .IsUnique();
+
                     b.ToTable("ProductItems");
                 });
 
@@ -369,6 +381,9 @@ namespace E_commerce_Infrastructure.Migrations
                         .HasColumnType("DATETIME");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("Promotions");
                 });
@@ -529,6 +544,11 @@ namespace E_commerce_Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("FirstName");
+
                     b.ToTable("Users");
                 });
 
@@ -582,6 +602,9 @@ namespace E_commerce_Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("Name", "CategoryId")
+                        .IsUnique();
 
                     b.ToTable("Variations");
                 });

@@ -16,6 +16,7 @@ namespace E_commerce_Infrastructure.Configurations
             builder.HasKey(v => v.Id);
             builder.Property(v => v.Name).IsRequired().HasMaxLength(100);
             builder.Property(v => v.CategoryId).IsRequired();
+            builder.HasIndex(v => new { v.Name, v.CategoryId }).IsUnique();
 
             builder.HasOne(v => v.Category)
                    .WithMany(c => c.Variations)

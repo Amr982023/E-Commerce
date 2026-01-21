@@ -15,10 +15,12 @@ namespace E_commerce_Infrastructure.Configurations
         {
             builder.HasKey(pi => pi.Id);
             builder.Property(pi => pi.SKU).IsRequired().HasColumnType("NVARCHAR(50)");
+            builder.HasIndex(pi => pi.SKU).IsUnique();
             builder.Property(pi => pi.ProductImage).HasMaxLength(200);
             builder.Property(pi => pi.Price).IsRequired().HasColumnType("decimal(18,2)");
             builder.Property(pi => pi.QtyInStock).IsRequired();
             builder.Property(pi => pi.ProductId).IsRequired();
+            builder.HasIndex(pi => pi.ProductId);
 
             builder.HasOne(pi => pi.Product)
                    .WithMany(p => p.ProductItems)

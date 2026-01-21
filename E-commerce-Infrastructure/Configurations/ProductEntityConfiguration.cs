@@ -15,6 +15,7 @@ namespace E_commerce_Infrastructure.Configurations
         {
             builder.HasKey(p => p.Id);
             builder.Property(p => p.Name).IsRequired().HasMaxLength(200);
+            builder.HasIndex(p => p.Name).IsUnique();
             builder.Property(p => p.Description).HasMaxLength(1000);
             builder.Property(p => p.ProductImage).HasMaxLength(500);     
 

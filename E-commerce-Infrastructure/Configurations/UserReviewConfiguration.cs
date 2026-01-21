@@ -16,7 +16,9 @@ namespace E_commerce_Infrastructure.Configurations
             builder.HasKey(ur => ur.Id);
             builder.Property(ur => ur.RatingValue).IsRequired();
             builder.Property(ur => ur.UserId).IsRequired();
+            builder.HasIndex(ur => ur.UserId);
             builder.Property(ur => ur.OrderedProductId).IsRequired();
+            builder.HasIndex(ur => ur.OrderedProductId);
             builder.Property(ur => ur.Comment).HasMaxLength(1000);
 
             builder.HasOne(ur => ur.User)

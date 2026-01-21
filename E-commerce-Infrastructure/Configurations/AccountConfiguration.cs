@@ -15,8 +15,10 @@ namespace E_commerce_Infrastructure.Configurations
         {
             builder.HasKey(a => a.Id);
             builder.Property(a => a.UserName).IsRequired().HasMaxLength(50);
+            builder.HasIndex(a => a.UserName).IsUnique();
             builder.Property(a => a.Password).IsRequired().HasMaxLength(500);
             builder.Property(a=>a.UserId).IsRequired();
+            builder.HasIndex(a => a.UserId);
             builder.Property(a => a.CreatedAt).IsRequired().HasDefaultValueSql("GETDATE()");
             builder.Property(a => a.UserRole).IsRequired().HasDefaultValue((short)2);
 

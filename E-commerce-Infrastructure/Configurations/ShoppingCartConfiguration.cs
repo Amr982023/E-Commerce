@@ -15,6 +15,7 @@ namespace E_commerce_Infrastructure.Configurations
         {
             builder.HasKey(sc => sc.Id);
             builder.Property(sc => sc.AccountId).IsRequired();
+            builder.HasIndex(sc => sc.AccountId).IsUnique();
 
 
             builder.HasOne(sc => sc.Account)

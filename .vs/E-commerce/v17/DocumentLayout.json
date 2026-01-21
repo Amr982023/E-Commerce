@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|d:\\cyber security\\fundamentals\\projects\\e-commerce\\e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECB7DFB-2231-476B-A456-FEBCEB2A53A5}|E-commerce.api\\E-commerce.api.csproj|solutionrelative:e-commerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Migrations\\20260121114806_UpdatesOnConfigurationsAddIndexing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-commerce-Infrastructure\\Migrations\\20260121114806_UpdatesOnConfigurationsAddIndexing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
-              "RelativeDocumentMoniker": "E-commerce.api\\Program.cs",
-              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce.api\\Program.cs",
-              "RelativeToolTip": "E-commerce.api\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACIAAAAWAAAAAAAAAA==",
+              "Title": "20260121114806_UpdatesOnConfigurationsAddIndexing.cs",
+              "DocumentMoniker": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Migrations\\20260121114806_UpdatesOnConfigurationsAddIndexing.cs",
+              "RelativeDocumentMoniker": "E-commerce-Infrastructure\\Migrations\\20260121114806_UpdatesOnConfigurationsAddIndexing.cs",
+              "ToolTip": "D:\\cyber security\\fundamentals\\Projects\\E-commerce\\E-commerce-Infrastructure\\Migrations\\20260121114806_UpdatesOnConfigurationsAddIndexing.cs",
+              "RelativeToolTip": "E-commerce-Infrastructure\\Migrations\\20260121114806_UpdatesOnConfigurationsAddIndexing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T17:41:11.322Z",
+              "WhenOpened": "2026-01-21T11:48:06.637Z",
               "EditorCaption": ""
             }
           ]

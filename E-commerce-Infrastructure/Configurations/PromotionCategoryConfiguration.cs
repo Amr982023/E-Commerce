@@ -14,6 +14,7 @@ namespace E_commerce_Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<PromotionCategory> builder)
         {
             builder.HasKey(pc => new { pc.CategoryId, pc.PromotionId });
+            builder.HasIndex(pc => pc.PromotionId);
 
             builder.HasOne(pc => pc.Category)
                    .WithMany(c => c.PromotionCategories)

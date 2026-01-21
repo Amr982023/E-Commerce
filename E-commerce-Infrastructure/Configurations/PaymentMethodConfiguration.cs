@@ -15,11 +15,13 @@ namespace E_commerce_Infrastructure.Configurations
         {
             builder.HasKey(pm => pm.Id);
             builder.Property(pm => pm.AccountNumber).IsRequired().HasMaxLength(50);
+            builder.HasIndex(pm => pm.AccountNumber).IsUnique();
             builder.Property(pm => pm.Provider).IsRequired().HasMaxLength(100);
             builder.Property(pm => pm.ExpiryDate).IsRequired();
             builder.Property(pm => pm.IsDefault).IsRequired();
             builder.Property(pm => pm.PaymentTypeId).IsRequired();
             builder.Property(pm => pm.AccountId).IsRequired();
+            builder.HasIndex(pm => pm.AccountId);
 
 
             builder.HasOne(pm => pm.PaymentType)
